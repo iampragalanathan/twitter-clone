@@ -9,10 +9,10 @@ twitButton.addEventListener("click",function(){
     tweetInput.value=""
 })
 
-let tweetArray=[]
+
 for(let tweet of tweetsData){
 
+     console.log(tweet)
    
 }
 
-console.log(tweetArray)
