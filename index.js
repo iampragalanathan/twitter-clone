@@ -1,5 +1,5 @@
 import { tweetsData } from "./data.js";
-console.log(tweetsData)
+// console.log(tweetsData)
 const tweetInput=document.getElementById("tweet-input")
 const twitButton=document.getElementById("tweet-btn")
 const feed=document.getElementById("feed")
