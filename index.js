@@ -10,8 +10,9 @@ document.addEventListener("click",function(e){
         console.log(e.target.dataset.reply)
     }
     else if(e.target.dataset.likes){
-
-        console.log(e.target.dataset.likes)
+       
+        handleLikeClick(e.target.dataset.likes)
+        // console.log(e.target.dataset.likes)
     }
     else if(e.target.dataset.retweets){
       
@@ -19,6 +20,9 @@ document.addEventListener("click",function(e){
     }
 })
 
+function handleLikeClick(tweetId){
+    console.log("function" ,tweetId)
+}
 
 twitButton.addEventListener("click",function(){
      
