@@ -4,6 +4,22 @@ const tweetInput=document.getElementById("tweet-input")
 const twitButton=document.getElementById("tweet-btn")
 const feed=document.getElementById("feed")
 
+document.addEventListener("click",function(e){
+
+    if(e.target.dataset.reply){
+        console.log(e.target.dataset.reply)
+    }
+    else if(e.target.dataset.likes){
+
+        console.log(e.target.dataset.likes)
+    }
+    else if(e.target.dataset.retweets){
+      
+        console.log(e.target.dataset.retweets)
+    }
+})
+
+
 twitButton.addEventListener("click",function(){
      
     // console.log(tweetInput.value)
@@ -26,7 +42,7 @@ function getfeedHtml(){
                     ${tweet.replies.length}
                 </span>
                 <span class="tweet-detail">
-                <i class="fa-solid fa-heart" data-like="${tweet.uuid}"></i>
+                <i class="fa-solid fa-heart" data-likes="${tweet.uuid}"></i>
                     ${tweet.likes}
                 </span>
                 <span class="tweet-detail">
