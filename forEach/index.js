@@ -21,7 +21,7 @@ const characters = [
     }
 ]
 
-for (let character of characters){
-    console.log(character)
-}
+// for (let character of characters){
+//     console.log(character)
+// }
 
