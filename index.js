@@ -21,6 +21,9 @@ document.addEventListener("click",function(e){
 })
 
 function handleLikeClick(tweetId){
+    const targetTweetObj=tweetsData.filter(function(tweet){
+        return tweet.uuid===tweetId
+    })
     console.log("function" ,tweetId)
 }
 
