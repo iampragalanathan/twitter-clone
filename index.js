@@ -24,7 +24,10 @@ function handleLikeClick(tweetId){
     const targetTweetObj=tweetsData.filter(function(tweet){
         return tweet.uuid===tweetId
     })[0]
-    console.log("function" ,tweetId)
+    // console.log("function" ,tweetId)
+    targetTweetObj.likes++
+    render()
+    console.log(targetTweetObj)
 }
 
 twitButton.addEventListener("click",function(){
