@@ -1,3 +1,8 @@
+let isLiked=false
+let 
+
+
+
 document.addEventListener('click', function(e){
 
      if(e.target.dataset.share){
@@ -11,4 +16,23 @@ document.addEventListener('click', function(e){
     
 })
 
+
+function render(){
+
+   let heartClass=""
+   if(isLiked){
+      heartClass="liked"
+   }
+   let imageHtml=`  <div class="img-container">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNu0gDjAwREMHcPyRaI6ivZ91fn6ynm-_6OQ&s"
+          alt="Man in front of dinosaur"
+          id="image-1"
+        />
+        <div class="social-icons-container">
+          <i class="fa-solid fa-heart" data-heart="image-1"></i>
+          <i class="fa-solid fa-share" data-share="image-1"></i>
+        </div>
+      </div>`
+}
 
