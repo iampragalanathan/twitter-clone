@@ -45,9 +45,14 @@ twitButton.addEventListener("click",function(){
 })
 
 function getfeedHtml(){
-
+    
+    
+    
     let feedHtml=""
     tweetsData.forEach(function(tweet){
+
+    let likeIconClas=""
+    let retweetIconClass=""
      feedHtml +=`<div class="tweet">
     <div class="tweet-inner">
         <img src="${tweet.profilePic}" class="profile-pic">
