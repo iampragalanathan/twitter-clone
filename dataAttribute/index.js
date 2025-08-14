@@ -25,7 +25,7 @@ document.addEventListener('click', function(e){
 function render(){
 
    let heartClass=""
-   let sharedClass=""
+   let retweetClass=""
    if(isLiked){
       heartClass="liked"
    }
@@ -33,10 +33,10 @@ function render(){
       heartClass=""
    }
    if(isShared){
-      sharedClass="shared"
+      retweetClass="shared"
    }
    else{
-      sharedClass=""
+      retweetClass=""
    }
   let imageHtml=`  <div class="img-container">
         <img
@@ -46,7 +46,7 @@ function render(){
         />
         <div class="social-icons-container">
           <i class="fa-solid fa-heart ${heartClass}" data-heart="image-1"></i>
-          <i class="fa-solid fa-share ${sharedClass}" data-share="image-1"></i>
+          <i class="fa-solid fa-share ${retweetClass}" data-share="image-1"></i>
         </div>
       </div>`
       document.getElementById("gallery-container").innerHTML=imageHtml
