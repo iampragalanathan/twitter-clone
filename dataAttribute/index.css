@@ -61,12 +61,12 @@ i:hover{
     transform: scale(1.2)
 }
 
-.gallery-container{
+#gallery-container{
     width: 250px;
     margin: 10px auto;
 }
 
-.gallery-container img{
+#gallery-container img{
     width: 100%;
 }
 
