@@ -7,7 +7,9 @@ document.addEventListener('click', function(e){
 
      if(e.target.dataset.share){
 
-        console.log(e.target.dataset.share)
+      //   console.log(e.target.dataset.share)
+      isShared=!isShared
+      render()
      }
      else if(e.target.dataset.heart){
 
@@ -26,7 +28,10 @@ function render(){
    if(isLiked){
       heartClass="liked"
    }
-   let imageHtml=`  <div class="img-container">
+   else{
+      heartClass=""
+   }
+  let imageHtml=`  <div class="img-container">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNu0gDjAwREMHcPyRaI6ivZ91fn6ynm-_6OQ&s"
           alt="Man in front of dinosaur"
