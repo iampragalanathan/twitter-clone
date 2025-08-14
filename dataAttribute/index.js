@@ -25,6 +25,7 @@ document.addEventListener('click', function(e){
 function render(){
 
    let heartClass=""
+   let sharedClas=""
    if(isLiked){
       heartClass="liked"
    }
