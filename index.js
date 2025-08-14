@@ -44,12 +44,12 @@ function handleRetweetClick(tweetId){
     })[0]
     // console.log("function" ,tweetId)
 
-    if(targetTweetObj.isShared){
-        targetTweetObj.isShared=false
+    if(targetTweetObj.isRetweeted){
+        targetTweetObj.isRetweeted=false
         targetTweetObj.retweets--
     }
     else{
-        targetTweetObj.isShared=true
+        targetTweetObj.isRetweeted=true
         targetTweetObj.retweets++
     }
     render()
@@ -68,9 +68,17 @@ function getfeedHtml(){
     
     let feedHtml=""
     tweetsData.forEach(function(tweet){
-
-    let likeIconClas=""
+    
+    let likeIconClass=""
     let retweetIconClass=""
+      if(tweet.isLiked){
+      likeIconClass="liked"
+   }
+   
+   if(tweet.isRetweeted){
+      retweetIconClass="retweeted"
+   }   
+
      feedHtml +=`<div class="tweet">
     <div class="tweet-inner">
         <img src="${tweet.profilePic}" class="profile-pic">
@@ -84,11 +92,11 @@ function getfeedHtml(){
                     ${tweet.replies.length}
                 </span>
                 <span class="tweet-detail">
-                <i class="fa-solid fa-heart" data-likes="${tweet.uuid}"></i>
+                <i class="fa-solid fa-heart ${likeIconClass} " data-likes="${tweet.uuid}"></i>
                     ${tweet.likes}
                 </span>
                 <span class="tweet-detail">
-                <i class="fa-solid fa-retweet" data-retweets="${tweet.uuid}"></i>
+                <i class="fa-solid fa-retweet ${retweetIconClass} " data-retweets="${tweet.uuid}"></i>
                     ${tweet.retweets}
                 </span>
             </div>   
