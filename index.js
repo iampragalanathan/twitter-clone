@@ -25,9 +25,17 @@ function handleLikeClick(tweetId){
         return tweet.uuid===tweetId
     })[0]
     // console.log("function" ,tweetId)
-    targetTweetObj.likes++
+
+    if(targetTweetObj.isLiked){
+        targetTweetObj.isLiked=false
+        targetTweetObj.likes--
+    }
+    else{
+        targetTweetObj.isLiked=true
+        targetTweetObj.likes++
+    }
     render()
-    console.log(targetTweetObj)
+    // console.log(targetTweetObj)
 }
 
 twitButton.addEventListener("click",function(){
@@ -47,6 +55,7 @@ function getfeedHtml(){
             <p class="handle">${tweet.handle}</p>
             <p class="tweet-text">${tweet.tweetText}</p>
             <div class="tweet-details">
+
                 <span class="tweet-detail">
                 <i class="fa-regular fa-comment-dots" data-reply="${tweet.uuid}"></i>
                     ${tweet.replies.length}
