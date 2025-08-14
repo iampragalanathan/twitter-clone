@@ -25,7 +25,7 @@ document.addEventListener('click', function(e){
 function render(){
 
    let heartClass=""
-   let sharedClas=""
+   let sharedClass=""
    if(isLiked){
       heartClass="liked"
    }
@@ -43,5 +43,6 @@ function render(){
           <i class="fa-solid fa-share" data-share="image-1"></i>
         </div>
       </div>`
+      document.getElementById("gallery-container").innerHTML=imageHtml
 }
-
+render()
