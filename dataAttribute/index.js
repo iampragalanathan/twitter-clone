@@ -32,6 +32,12 @@ function render(){
    else{
       heartClass=""
    }
+   if(isShared){
+      sharedClass="shared"
+   }
+   else{
+      sharedClass=""
+   }
   let imageHtml=`  <div class="img-container">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNu0gDjAwREMHcPyRaI6ivZ91fn6ynm-_6OQ&s"
