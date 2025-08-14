@@ -1,5 +1,5 @@
 let isLiked=false
-let 
+let isShared=false
 
 
 
@@ -11,8 +11,11 @@ document.addEventListener('click', function(e){
      }
      else if(e.target.dataset.heart){
 
-      console.log(e.target.dataset.heart)
+      // console.log(e.target.dataset.heart)
+      isLiked=!isLiked
+      render()
      }
+
     
 })
 
@@ -30,7 +33,7 @@ function render(){
           id="image-1"
         />
         <div class="social-icons-container">
-          <i class="fa-solid fa-heart" data-heart="image-1"></i>
+          <i class="fa-solid fa-heart ${heartClass}" data-heart="image-1"></i>
           <i class="fa-solid fa-share" data-share="image-1"></i>
         </div>
       </div>`
